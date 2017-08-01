@@ -14,4 +14,4 @@ before_install:
 install:
     - conda create -n testenv -y -c conda-forge python=3.6
     - source activate testenv  
-    - nsloopup conda.anaconda.org
+    - nslookup conda.anaconda.org
