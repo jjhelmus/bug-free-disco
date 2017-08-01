@@ -8,8 +8,10 @@ before_install:
   - ./miniconda.sh -b
   - export PATH=/home/travis/miniconda2/bin:$PATH
   - conda update --yes conda
+  - conda config --set show_channel_urls true
   - conda info -a
 
 install:
     - conda create -n testenv -y -c conda-forge python=3.6
     - source activate testenv  
+    - nsloopup conda.anaconda.org
