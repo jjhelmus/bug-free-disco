@@ -13,6 +13,7 @@ before_install:
 
 install:
     - wget https://anaconda.org/jjhelmus/setuptools/29.0.1/download/linux-64/setuptools-29.0.1-py36_1.tar.bz2 -O pkg.tar.bz2
+    - wget https://conda.anaconda.org/jjhelmus/linux-64/repodata.json -O repodata.json
     - conda install -y -vvv -c jjhelmus setuptools=29
     - conda create -n testenv -y -c conda-forge python=3.6
     - source activate testenv  
