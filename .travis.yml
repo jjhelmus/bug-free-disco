@@ -3,6 +3,7 @@ python:
   - 3.6
 
 before_install:
+  - curl -o repodata.json https://conda.anaconda.org/jjhelmus/linux-64/repodata.json
   - wget -d -S https://conda.anaconda.org/jjhelmus/linux-64/repodata.json -O repodata.json
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
   - chmod +x miniconda.sh
