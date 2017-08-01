@@ -12,6 +12,7 @@ before_install:
   - conda info -a
 
 install:
+    - conda install -c jjhelmus setuptools=29
     - conda create -n testenv -y -c conda-forge python=3.6
     - source activate testenv  
     - nslookup conda.anaconda.org
