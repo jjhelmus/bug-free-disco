@@ -3,7 +3,7 @@ python:
   - 3.6
 
 before_install:
-  - wget -d https://anaconda.org/jjhelmus/setuptools/29.0.1/download/linux-64/setuptools-29.0.1-py36_1.tar.bz2 -O pkg.tar.bz2
+  - wget -d https://conda.anaconda.org/jjhelmus/linux-64/repodata.json -O repodata.json
   - wget https://repo.continuum.io/miniconda/Miniconda3-latest-Linux-x86_64.sh -O miniconda.sh
   - chmod +x miniconda.sh
   - ./miniconda.sh -b
@@ -13,7 +13,7 @@ before_install:
   - conda info -a
 
 install:
-    - wget https://conda.anaconda.org/jjhelmus/linux-64/repodata.json -O repodata.json
+    - wget https://anaconda.org/jjhelmus/setuptools/29.0.1/download/linux-64/setuptools-29.0.1-py36_1.tar.bz2 -O pkg.tar.bz2
     - conda install -y -vvv -c jjhelmus setuptools=29
     - conda create -n testenv -y -c conda-forge python=3.6
     - source activate testenv  
